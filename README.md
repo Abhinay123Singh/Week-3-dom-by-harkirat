@@ -1,1 +1,1 @@
-Basically  I Have  made a Simple #TodoList where adding a to do  #deleting to do #updating to do  
+Basically  I Have  made a Simple #TodoList where  static html, dynamic html  fetching element #Adding a to do  #Deleting to do #updating to do Functionality by using Dom (Document object Model)
