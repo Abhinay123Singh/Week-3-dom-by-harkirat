@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    <input type="text" />
+    <button onclick="addTodo()">Add Todo!</button>
+    
+    <script>
+        function addTodo() {
+            const value = document.querySelector("input").value;
+            if (value) { 
+                const spanE1 = document.createElement("span"); // Create span for the todo text
+                const buttonE1 = document.createElement("button"); // Create delete button
+                const divE1 = document.createElement("div"); // Create div to hold todo
+
+                spanE1.innerHTML = value; // Set todo text
+                buttonE1.innerHTML = "Delete"; // Set delete button text
+
+                // Append span and button to the div
+                divE1.appendChild(spanE1);
+                divE1.appendChild(buttonE1);
+
+                // Append div to the body
+                document.querySelector("body").appendChild(divE1);
+
+                // Clear the input after adding todo
+                document.querySelector("input").value = "";
+
+                // Add functionality to delete the todo when the delete button is clicked
+                buttonE1.addEventListener("click", function() {
+                    divE1.remove(); // Remove the div (todo item) when delete is clicked
+                });
+            }
+        }
+    </script>
+</body>
+</html>
